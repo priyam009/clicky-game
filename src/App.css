@@ -1,14 +1,9 @@
-.wrapper {
-  height: 100vh;
-  background-color: #fff056;
-}
-
 .nav-content {
   background-color: #fff056;
 }
 
 .header-content {
-  height: 175px;
+  height: 150px;
   /* background-color: #e6d800; */
   background-color: #496e5e;
   
@@ -17,4 +12,38 @@
 
 .header-para {
   font-size: 23px;;
+}
+
+.wrapper {
+  padding-top: 50px;
+  background: #ECEFF1;
+  height: 100%;
+  width: 1000px;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 20px;
+  justify-content: space-around;
+  align-content: flex-start;
+  overflow: auto;
+}
+
+.character-card {
+  background: #fff;
+  border-radius: 2px;
+  height: 200px;
+  margin: 1rem;
+  position: relative;
+  width: 200px;
+  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  text-align: left;
+}
+
+.character-card > .img-container {
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+  background:#6CADDC;
+}
+.character-card > .img-container > img {
+  width: 70%
 }
