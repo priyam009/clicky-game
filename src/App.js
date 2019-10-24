@@ -18,6 +18,25 @@ class App extends React.Component {
     this.state.characters.forEach(character => (character.clicked = false));
   };
 
+  shuffle = character => {
+    let current = character.length;
+    let temp;
+    let index;
+
+    // While there are elements in the array
+    while (current > 0) {
+      // Pick a random index
+      index = Math.floor(Math.random() * current);
+      // Decrease ctr by 1
+      current--;
+      // And swap the last element with it
+      temp = character[current];
+      character[current] = character[index];
+      character[index] = temp;
+    }
+    return character;
+  };
+
   //Handle click on characters- update score
   handleClick = id => {
     const newCharacters = this.state.characters.filter(character => {
@@ -34,6 +53,8 @@ class App extends React.Component {
       }
       return character;
     });
+
+    this.shuffle(newCharacters);
 
     console.log("newCharacters", newCharacters);
     this.setState({
