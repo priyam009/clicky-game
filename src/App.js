@@ -15,8 +15,8 @@ class App extends React.Component {
 
   //Reset all character to "clicked = false"
   resetCharacters = () => {
-    this.state.characters.forEach(character => character.clicked = false)
-  }
+    this.state.characters.forEach(character => (character.clicked = false));
+  };
 
   //Handle click on characters- update score
   handleClick = id => {
@@ -25,12 +25,12 @@ class App extends React.Component {
         character.clicked = true;
         this.setState({
           score: this.state.score + 1
-        })
-      } else if(character.id === id && character.clicked) {
+        });
+      } else if (character.id === id && character.clicked) {
         this.resetCharacters();
         this.setState({
           score: 0
-        })
+        });
       }
       return character;
     });
@@ -38,24 +38,27 @@ class App extends React.Component {
     console.log("newCharacters", newCharacters);
     this.setState({
       characters: newCharacters
-    })
+    });
   };
 
   render() {
     return (
       <>
         <Navbar score={this.state.score} topScore={this.state.topScore} />
-        <Header />
-        <Wrapper>
-          {this.state.characters.map(character => (
-            <Game
-              id={character.id}
-              name={character.name}
-              image={character.image}
-              handleClick={this.handleClick}
-            />
-          ))}
-        </Wrapper>
+        <div className="div-content">
+          <Header />
+          <Wrapper>
+            {this.state.characters.map(character => (
+              <Game
+                key={character.id}
+                id={character.id}
+                name={character.name}
+                image={character.image}
+                handleClick={this.handleClick}
+              />
+            ))}
+          </Wrapper>
+        </div>
       </>
     );
   }
