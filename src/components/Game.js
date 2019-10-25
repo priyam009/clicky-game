@@ -4,7 +4,7 @@ import "../App.css";
 function Game(props) {
   return (
     //On click button handler
-    <button onClick={() => props.handleClick(props.id)}>
+    <button className="game-button" onClick={() => props.handleClick(props.id)}>
       <div className="card character-card">
         <div className="img-container">
           <img alt={props.name} src={props.image} />
