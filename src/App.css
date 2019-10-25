@@ -1,11 +1,28 @@
 body {
-  background-color: #fff056;
+  background-color: #e5b081;
+  font-family: 'Cairo', sans-serif;
 }
 .nav-content {
-  background-color: #fff056;
+  background-color: #e5b081;
   position: fixed;
   z-index: 3;
   width: 100%;
+  box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-brand {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.nav-item {
+  font-weight: bold;
+}
+
+.nav-instruction{
+  margin-left: 40px;
 }
 
 .div-content {
@@ -14,18 +31,18 @@ body {
 
 .header-content {
   height: 150px;
-  background-color: #496e5e;
-  color: #121212
+  background-color: #4abe8b;
+  color: #121212;
 }
 
 .header-para {
-  font-size: 23px;;
+  font-size: 23px;
 }
 
 .wrapper {
   margin-top: 25px;
   padding-top: 50px;
-  background: #ECEFF1;
+  background: #eceff1;
   height: 100%;
   width: 1000px;
   display: flex;
@@ -52,8 +69,15 @@ body {
   overflow: hidden;
   text-align: center;
   padding-top: 25px;
-  background:#6CADDC;
+  background: #6caddc;
 }
 .character-card > .img-container > img {
-  width: 70%
+  width: 70%;
+}
+
+.game-button {
+  margin-bottom: 10px;
+  box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.51);
+  -webkit-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.51);
+  -moz-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.51);
 }
