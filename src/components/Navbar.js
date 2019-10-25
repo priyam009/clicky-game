@@ -5,7 +5,9 @@ function Navbar(props) {
   return (
     <nav className="navbar navbar-light d-flex flex-row justify-content-between nav-content">
       <div className="d-flex">
-        <a href="/" className="navbar-brand">Clicky Game!</a>
+        <a href="/" className="navbar-brand">
+          Clicky Game!
+        </a>
       </div>
       <div>Click on the image to begin!</div>
       <ul className="navbar-nav d-flex flex-row">
