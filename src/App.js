@@ -7,6 +7,7 @@ import Game from "./components/Game";
 import characters from "./characters.json";
 
 class App extends React.Component {
+  //Set initial state
   state = {
     score: 0,
     topScore: 0,
@@ -18,6 +19,7 @@ class App extends React.Component {
     this.state.characters.forEach(character => (character.clicked = false));
   };
 
+  //Shuffle characters after every on click
   shuffle = character => {
     let current = character.length;
     let temp;
@@ -27,7 +29,7 @@ class App extends React.Component {
     while (current > 0) {
       // Pick a random index
       index = Math.floor(Math.random() * current);
-      // Decrease ctr by 1
+      // Decrease current by 1
       current--;
       // And swap the last element with it
       temp = character[current];
@@ -39,12 +41,15 @@ class App extends React.Component {
 
   //Handle click on characters- update score
   handleClick = id => {
+
+    //Loop through all characters and save in newCharacter variable- update characters and score
     const newCharacters = this.state.characters.filter(character => {
       if (character.id === id && !character.clicked) {
         character.clicked = true;
         this.setState({
           score: this.state.score + 1
         });
+        console.log("this.state.score", this.state.score);
       } else if (character.id === id && character.clicked) {
         this.resetCharacters();
         this.setState({
