@@ -9,7 +9,7 @@ function Navbar(props) {
           Clicky Game!
         </a>
       </div>
-      <div>Click on the image to begin!</div>
+      <div className="nav-instruction">Click on the image to begin!</div>
       <ul className="navbar-nav d-flex flex-row">
         <li className="nav-item p-3">Score: {props.score}</li>
         <li className="nav-item p-3">Top Score: {props.topScore}</li>
