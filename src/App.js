@@ -60,17 +60,26 @@ class App extends React.Component {
     });
 
     this.shuffle(newCharacters);
-
-    console.log("newCharacters", newCharacters);
     this.setState({
       characters: newCharacters
     });
   };
 
+  //If component updated
+  componentDidUpdate() {
+    //When component score updates- update topScore if true
+    if (this.state.score > this.state.topScore) {
+      this.setState({ topScore: this.state.score });
+    }
+  }
+
   render() {
     return (
       <>
-        <Navbar score={this.state.score} topScore={this.state.topScore} />
+        <Navbar
+          score={this.state.score}
+          topScore={this.state.topScore}
+        />
         <div className="div-content">
           <Header />
           <Wrapper>
