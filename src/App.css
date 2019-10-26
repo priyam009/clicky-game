@@ -1,9 +1,10 @@
 body {
-  background-color: #e5b081;
-  font-family: 'Cairo', sans-serif;
+  padding-bottom:10px;
+  font-family: "Cairo", sans-serif;
+  background-image: linear-gradient(to bottom, #4abe8b, #55c698, #5fcea4, #6ad5b0, #76ddbc, #6ed4c1, #6bcbc3, #6cc1c2, #67a4b0, #658898, #606e7a, #54565a);
 }
 .nav-content {
-  background-color: #e5b081;
+  background-image: linear-gradient(to bottom, #ffffff, #daebff, #9adef4, #55d1ce);
   position: fixed;
   z-index: 3;
   width: 100%;
@@ -19,17 +20,17 @@ body {
 
 .nav-item {
   font-weight: bold;
+  font-size: 20px;
 }
 
-.nav-instruction{
+.nav-instruction {
   margin-left: 40px;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .correct {
   color: green;
-  transition-delay: 0.5s;
 }
 
 .incorrect {
@@ -42,8 +43,11 @@ body {
 
 .header-content {
   height: 150px;
-  background-color: #4abe8b;
+  background-color: #00bf72;
   color: #121212;
+  box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 .header-para {
@@ -88,7 +92,7 @@ body {
 
 .game-button {
   margin-bottom: 10px;
-  box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.51);
-  -webkit-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.51);
-  -moz-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.51);
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.51);
+  -webkit-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.51);
+  -moz-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.51);
 }
