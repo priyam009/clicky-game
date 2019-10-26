@@ -11,8 +11,15 @@ class App extends React.Component {
   state = {
     score: 0,
     topScore: 0,
-    characters: characters
+    characters: characters,
+    instructions: ""
   };
+
+  componentDidMount() {
+    this.setState({
+      instructions: "Click on the image to begin!"
+    });
+  }
 
   //Reset all character to "clicked = false"
   resetCharacters = () => {
@@ -41,19 +48,20 @@ class App extends React.Component {
 
   //Handle click on characters- update score
   handleClick = id => {
-
     //Loop through all characters and save in newCharacter variable- update characters and score
     const newCharacters = this.state.characters.filter(character => {
       if (character.id === id && !character.clicked) {
         character.clicked = true;
         this.setState({
-          score: this.state.score + 1
+          score: this.state.score + 1,
+          instructions: "You guessed correctly!"
         });
         console.log("this.state.score", this.state.score);
       } else if (character.id === id && character.clicked) {
         this.resetCharacters();
         this.setState({
-          score: 0
+          score: 0,
+          instructions: "You guessed incorrectly!"
         });
       }
       return character;
@@ -69,7 +77,9 @@ class App extends React.Component {
   componentDidUpdate() {
     //When component score updates- update topScore if true
     if (this.state.score > this.state.topScore) {
-      this.setState({ topScore: this.state.score });
+      this.setState({
+        topScore: this.state.score
+      });
     }
   }
 
@@ -79,6 +89,8 @@ class App extends React.Component {
         <Navbar
           score={this.state.score}
           topScore={this.state.topScore}
+          instructions={this.state.instructions}
+          class={this.state.class}
         />
         <div className="div-content">
           <Header />
