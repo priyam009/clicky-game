@@ -54,14 +54,14 @@ class App extends React.Component {
         character.clicked = true;
         this.setState({
           score: this.state.score + 1,
-          instructions: "You guessed correctly!"
+          instructions: "Correct Guess"
         });
         console.log("this.state.score", this.state.score);
       } else if (character.id === id && character.clicked) {
         this.resetCharacters();
         this.setState({
           score: 0,
-          instructions: "You guessed incorrectly!"
+          instructions: "Incorrect Guess"
         });
       }
       return character;
