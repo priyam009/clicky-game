@@ -23,6 +23,17 @@ body {
 
 .nav-instruction{
   margin-left: 40px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.correct {
+  color: green;
+  transition-delay: 0.5s;
+}
+
+.incorrect {
+  color: red;
 }
 
 .div-content {
