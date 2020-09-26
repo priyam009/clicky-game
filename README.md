@@ -10,7 +10,7 @@
 
 ## Live Website
 
-https://priyam009.github.io/twist-eat/
+https://priyam009.github.io/clicky-game/
 
 * Click on any image to begin.
 * Try not to click the same image again.
